@@ -6,7 +6,7 @@ Currently configured to use `index.ts` in the `src/` directory. Change the `tsco
 
 ```javascript
 const data = [1, [2, 3, [4, 5], 6], 7, [8, 9, [[10]]]];
-const flattened = flattenArray(data);
+const flattened = recursiveFlatten(data);
 console.log(`flattened = [${flattened}]`);
 // output>>> flattened = [1,2,3,4,5,6,7,8,9,10]
 ```
