@@ -4,7 +4,7 @@
  * @param array a nested array that you want to be flattened
  * @returns a one dimensional array with the elements in the order seen
  */
-function flattenArray(array: any[]): any[] {
+function recursiveFlatten(array: any[]): any[] {
 	let flattened: any[] = [];
 	function flatten(array: any[]) {
 		for (const item of array) {
@@ -22,7 +22,7 @@ function flattenArray(array: any[]): any[] {
 
 function main() {
 	const data = [1, [2, 3, [4, 5], 6], 7, [8, 9, [[10]]]];
-	const flattened = flattenArray(data);
+	const flattened = recursiveFlatten(data);
 	console.log(`flattened = [${flattened}]`);
 	// output>>> flattened = [1,2,3,4,5,6,7,8,9,10]
 }
