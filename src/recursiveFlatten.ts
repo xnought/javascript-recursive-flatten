@@ -19,3 +19,4 @@ export default function (array: any[]): any[] {
 	flatten(array);
 	return flattened;
 }
+
